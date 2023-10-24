@@ -1,4 +1,4 @@
-package src.main.java.org.lecture;
+package main.java.org.lecture;
 
 public class CustomArrayImpl implements CustomArray {
 

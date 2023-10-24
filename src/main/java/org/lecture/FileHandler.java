@@ -1,4 +1,4 @@
-package src.main.java.org.lecture;
+package main.java.org.lecture;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
