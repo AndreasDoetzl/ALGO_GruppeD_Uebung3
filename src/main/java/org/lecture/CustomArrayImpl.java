@@ -38,23 +38,13 @@ public class CustomArrayImpl implements CustomArray {
         }
     }
 
+    @Override
+    public int length() {
+        return data.length;
+    }
+
 
     public void sort() {
-        int n = data.length;
-
-        for (int i = 0; i < n - 1; i++) {
-            int min_idx = i;
-            for (int j = i + 1; j < n; j++) {
-                if (data[j] != null && data[min_idx] != null) {
-                    if (data[j] < data[min_idx]) {
-                        min_idx = j;
-                    }
-                }
-            }
-            Integer temp = data[min_idx];
-            data[min_idx] = data[i];
-            data[i] = temp;
-        }
     }
 
     public void printArray() {
