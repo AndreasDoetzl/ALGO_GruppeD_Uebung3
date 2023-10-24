@@ -10,11 +10,11 @@ public class Main {
         FileHandler fileHandler = new FileHandler();
 
         try {
-            fileHandler.readNumbersFromCSV(array);
+            CustomArray array = fileHandler.readNumbersFromCSV();
+            ((CustomArrayImpl) array).sort();
+            ((CustomArrayImpl) array).printArray();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        ((CustomArrayImpl)array).sort();
-        ((CustomArrayImpl)array).printArray();
     }
 }
