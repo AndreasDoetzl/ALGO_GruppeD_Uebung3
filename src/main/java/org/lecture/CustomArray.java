@@ -29,4 +29,6 @@ package main.java.org.lecture;
      */
     int length();
 
+    Integer get(int index);
+
 }

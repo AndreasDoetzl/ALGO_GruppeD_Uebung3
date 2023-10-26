@@ -13,7 +13,7 @@ public class CustomArrayTest {
         array.insert(10);
         array.insert(5);
 
-       // assertEquals();
+     //   assertEquals();
 
     }
 }

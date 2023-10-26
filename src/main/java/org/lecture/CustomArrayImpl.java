@@ -56,6 +56,14 @@ public class CustomArrayImpl implements CustomArray {
     public void sort() {
 
     }
+
+    @Override
+    public Integer get(int index) {
+        if (index > 0 && index < data.length) {
+            return data[index];
+        }
+        return -1;
+    }
     /**
      * Gibt das Array aus.
      */
