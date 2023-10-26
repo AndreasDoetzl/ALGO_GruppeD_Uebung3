@@ -1,30 +1,32 @@
 package main.java.org.lecture;
 
-public interface CustomArray {
+
+/**
+ * Eine Schnittstelle, die die Operationen für ein benutzerdefiniertes Array definiert.
+ */public interface CustomArray {
 
     /**
-     * @return sucht die nächste freie Stelle im Array und gibt den Index zurück
+     * Sucht die nächste freie Stelle im Array und gibt den Index zurück.
+     * @return Der Index der nächsten freien Stelle.
      */
     int nextFree();
 
     /**
-     * fügt ein neues Element in das Array ein.
-     *
-     * @param value
+     * Fügt ein neues Element in das Array ein.
+     * @param value Das einzufügende Element.
      */
     void insert(Integer value);
 
     /**
-     * löscht ein Element x
-     *
-     * @param value
+     * Löscht ein Element aus dem Array.
+     * @param value Das zu löschende Element.
      */
     void remove(Integer value);
 
     /**
-     * liefert die größe des Arrays.
-     *
-     * @return size
+     * Liefert die Größe des Arrays.
+     * @return Die Größe des Arrays.
      */
     int length();
+
 }

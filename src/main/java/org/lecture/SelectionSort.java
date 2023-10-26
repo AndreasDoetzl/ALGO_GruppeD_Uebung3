@@ -1,24 +1,28 @@
 package main.java.org.lecture;
 
 public class SelectionSort implements CustomArraySorter {
-
+/**
+ * Eine Implementierung des SelectionSort-Algorithmus für die CustomArraySorter-Schnittstelle.
+ */
     @Override
-    public void sort(CustomArray customArray) {
-        int n = customArray.length();
+    public void sort(CustomArray array) {
+        int n = array.length();
+/*
+        for (int i = 0; i < n - 1; i++) {
+            int min_idx = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array.get(j) != null && array[min_idx] != null) {
+                    if (array[j] < array[min_idx]) {
+                        min_idx = j;
+                    }
+                }
+            }
+            Integer temp = array[min_idx];
+            array[min_idx] = array[i];
+            array[i] = temp;
+        }
 
-//        for (int i = 0; i < n - 1; i++) {
-//            int min_idx = i;
-//            for (int j = i + 1; j < n; j++) {
-//                if (customArray[j] != null && customArray[min_idx] != null) {
-//                    if (customArray[j] < customArray[min_idx]) {
-//                        min_idx = j;
-//                    }
-//                }
-//            }
-//            Integer temp = customArray[min_idx];
-//            customArray[min_idx] = customArray[i];
-//            customArray[i] = temp;
-//        }
 
+ */
     }
 }

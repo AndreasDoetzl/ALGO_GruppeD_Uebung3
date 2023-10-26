@@ -6,12 +6,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CustomArray array = new CustomArrayImpl(10);
+      //  CustomArray array = new CustomArrayImpl(10);
         FileHandler fileHandler = new FileHandler();
 
         try {
             CustomArray array = fileHandler.readNumbersFromCSV();
-            ((CustomArrayImpl) array).sort();
+            CustomArraySorter sorter = new SelectionSort();
+            sorter.sort(array);
+            //   ((CustomArrayImpl) array).sort();
             ((CustomArrayImpl) array).printArray();
         } catch (IOException e) {
             e.printStackTrace();
