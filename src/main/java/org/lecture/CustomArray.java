@@ -31,4 +31,6 @@ package main.java.org.lecture;
 
     Integer get(int index);
 
+    void set(int index, Integer value);
+
 }

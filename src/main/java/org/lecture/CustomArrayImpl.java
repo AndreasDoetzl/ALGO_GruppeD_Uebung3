@@ -51,12 +51,18 @@ public class CustomArrayImpl implements CustomArray {
 
     /**
      * Sortiert das gegebene CustomArray.
-     * @param customArray Das zu sortierende CustomArray.
+     * @param
      */
     public void sort() {
 
     }
 
+    /**
+     * Gibt den Wert an der angegebenen Position im Array zurück.
+     *
+     * @param index Der Index, an dem der Wert abgerufen werden soll.
+     * @return Der Wert an der angegebenen Position oder -1, wenn der Index ungültig ist.
+     */
     @Override
     public Integer get(int index) {
         if (index > 0 && index < data.length) {
@@ -64,6 +70,15 @@ public class CustomArrayImpl implements CustomArray {
         }
         return -1;
     }
+
+    @Override
+    public void set(int index, Integer value) {
+        if (index >= 0 && index < data.length) {
+            data[index] = value;
+        }
+    }
+
+
     /**
      * Gibt das Array aus.
      */
