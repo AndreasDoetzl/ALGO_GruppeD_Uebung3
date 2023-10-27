@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CustomArray array = new CustomArrayImpl(10);
         FileHandler fileHandler = new FileHandler();
 
         try {
