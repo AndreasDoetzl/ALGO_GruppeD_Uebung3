@@ -33,9 +33,9 @@ package org.lecture;
      * Gibt den Wert an der angegebenen Position im Array zurück.
      *
      * @param index Der Index, an dem der Wert abgerufen werden soll.
-     * @return Der Wert an der angegebenen Position oder -1, wenn der Index ungültig ist.
+     * @return Der Wert an der angegebenen Position oder null, wenn der Index ungültig ist.
      */
-    Integer get(int index);
+    Integer getValue(int index);
 
     /**
      * Setzt den Wert an der angegebenen Positionmit im Array
@@ -43,6 +43,6 @@ package org.lecture;
      * @param index, an dem Wert festgelegt werden soll.
      * @param value der an der angegebenen Position festgelegt werden soll.
      */
-    void set(int index, Integer value);
+    void setValue(int index, Integer value);
 
 }

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class CustomArrayImplTest {
 
@@ -19,7 +20,7 @@ public class CustomArrayImplTest {
         customArray.insert(10);
         customArray.insert(5);
 
-        assertEquals(5, customArray.get(1));
+        assertEquals(5, customArray.getValue(1));
 
     }
 
@@ -31,9 +32,9 @@ public class CustomArrayImplTest {
 
         customArray.remove(5);
 
-        assertEquals(10, customArray.get(0));
-        assertEquals(-1, customArray.get(1));
-        assertEquals(15, customArray.get(2));
+        assertEquals(10, customArray.getValue(0));
+        assertNull(customArray.getValue(1));
+        assertEquals(15, customArray.getValue(2));
 
     }
 
@@ -47,9 +48,9 @@ public class CustomArrayImplTest {
         CustomArraySorter sorter = new SelectionSort();
         sorter.sort(customArray);
 
-        assertEquals(5, customArray.get(0));
-        assertEquals(10, customArray.get(1));
-        assertEquals(15, customArray.get(2));
+        assertEquals(5, customArray.getValue(0));
+        assertEquals(10, customArray.getValue(1));
+        assertEquals(15, customArray.getValue(2));
     }
 
     @Test

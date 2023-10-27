@@ -5,7 +5,7 @@ package org.lecture;
  */
 public class CustomArrayImpl implements CustomArray {
 
-    private Integer[] data;
+    private final Integer[] data;
 
     /**
      * Konstruktor für die CustomArrayImpl-Klasse.
@@ -31,7 +31,6 @@ public class CustomArrayImpl implements CustomArray {
         int index = nextFree();
         if (index != -1) {
             data[index] = value;
-        } else {
         }
     }
 
@@ -50,30 +49,18 @@ public class CustomArrayImpl implements CustomArray {
         return data.length;
     }
 
-    /**
-     * Sortiert das gegebene CustomArray.
-     * @param
-     */
-    public void sort() {
 
-    }
 
-    /**
-     * Gibt den Wert an der angegebenen Position im Array zurück.
-     *
-     * @param index Der Index, an dem der Wert abgerufen werden soll.
-     * @return Der Wert an der angegebenen Position oder -1, wenn der Index ungültig ist.
-     */
     @Override
-    public Integer get(int index) {
-        if (index > 0 && index < data.length) {
+    public Integer getValue(int index) {
+        if (index >= 0 && index < data.length) {
             return data[index];
         }
-        return -1;
+        return null;
     }
 
     @Override
-    public void set(int index, Integer value) {
+    public void setValue(int index, Integer value) {
         if (index >= 0 && index < data.length) {
             data[index] = value;
         }
