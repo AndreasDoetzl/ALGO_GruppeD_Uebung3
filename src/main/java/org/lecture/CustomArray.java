@@ -18,7 +18,7 @@ package org.lecture;
     void insert(Integer value);
 
     /**
-     * Löscht ein Element aus dem Array.
+     * Löscht erste gefundene Element aus dem Array.
      * @param value Das zu löschende Element.
      */
     void remove(Integer value);

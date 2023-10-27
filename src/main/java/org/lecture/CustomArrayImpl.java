@@ -9,6 +9,7 @@ public class CustomArrayImpl implements CustomArray {
 
     /**
      * Konstruktor für die CustomArrayImpl-Klasse.
+     *
      * @param size Die Größe des Arrays.
      */
     public CustomArrayImpl(int size) {
@@ -31,6 +32,8 @@ public class CustomArrayImpl implements CustomArray {
         int index = nextFree();
         if (index != -1) {
             data[index] = value;
+        } else {
+            throw new ArrayIndexOutOfBoundsException("Index out of bounds! The value is: " + value);
         }
     }
 
@@ -63,6 +66,9 @@ public class CustomArrayImpl implements CustomArray {
     public void setValue(int index, Integer value) {
         if (index >= 0 && index < data.length) {
             data[index] = value;
+        } else {
+            throw new ArrayIndexOutOfBoundsException("Index is undefined! The value is not set in Array! : " + value
+                    + " index: " + index);
         }
     }
 

@@ -3,8 +3,7 @@ package org.lecture;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CustomArrayImplTest {
 
@@ -16,14 +15,22 @@ public class CustomArrayImplTest {
     }
     @Test
     public void testInsert() {
-
         customArray.insert(10);
         customArray.insert(5);
 
+        assertEquals(10, customArray.getValue(0));
         assertEquals(5, customArray.getValue(1));
-
+        assertEquals("[10, 5, null]", customArray.toString());
     }
 
+    @Test
+    public void testInsertException() {
+        customArray.insert(10);
+        customArray.insert(5);
+        customArray.insert(15);
+
+        assertThrowsExactly(ArrayIndexOutOfBoundsException.class, () -> customArray.insert(20));
+    }
     @Test
     public void testRemove() {
         customArray.insert(10);
@@ -32,9 +39,7 @@ public class CustomArrayImplTest {
 
         customArray.remove(5);
 
-        assertEquals(10, customArray.getValue(0));
-        assertNull(customArray.getValue(1));
-        assertEquals(15, customArray.getValue(2));
+        assertEquals("[10, null, 15]", customArray.toString());
 
     }
 
@@ -48,13 +53,40 @@ public class CustomArrayImplTest {
         CustomArraySorter sorter = new SelectionSort();
         sorter.sort(customArray);
 
-        assertEquals(5, customArray.getValue(0));
-        assertEquals(10, customArray.getValue(1));
-        assertEquals(15, customArray.getValue(2));
+        assertEquals("[5, 10, 15]", customArray.toString());
     }
 
     @Test
-    public void testNextFree() {
+    public void testNextFreeFull() {
+        customArray.insert(10);
+        customArray.insert(5);
+        customArray.insert(15);
 
+        assertEquals(-1, customArray.nextFree());
+    }
+    @Test
+    public void testNextFree() {
+        customArray.insert(10);
+        customArray.insert(5);
+
+        assertEquals(2, customArray.nextFree());
+    }
+
+
+    @Test
+    public void testGetValue () {
+        assertNull(customArray.getValue(4));
+        assertNull(customArray.getValue(1));
+    }
+
+    @Test
+    public void testSetValue () {
+        customArray.insert(10);
+        customArray.insert(5);
+        customArray.insert(15);
+
+        customArray.setValue(0,20);
+        assertEquals(20, customArray.getValue(0));
+        assertThrowsExactly(ArrayIndexOutOfBoundsException.class, () -> customArray.setValue(4, 5));
     }
 }
