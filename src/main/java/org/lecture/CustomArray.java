@@ -29,8 +29,20 @@ package main.java.org.lecture;
      */
     int length();
 
+    /**
+     * Gibt den Wert an der angegebenen Position im Array zurück.
+     *
+     * @param index Der Index, an dem der Wert abgerufen werden soll.
+     * @return Der Wert an der angegebenen Position oder -1, wenn der Index ungültig ist.
+     */
     Integer get(int index);
 
+    /**
+     * Setzt den Wert an der angegebenen Positionmit im Array
+     * auf den angegebenen Wert, sofern der Index gültig ist.
+     * @param index, an dem Wert festgelegt werden soll.
+     * @param value der an der angegebenen Position festgelegt werden soll.
+     */
     void set(int index, Integer value);
 
 }

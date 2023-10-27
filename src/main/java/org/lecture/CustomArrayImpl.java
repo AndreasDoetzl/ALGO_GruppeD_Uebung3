@@ -25,6 +25,7 @@ public class CustomArrayImpl implements CustomArray {
         return -1;
     }
 
+
     @Override
     public void insert(Integer value) {
         int index = nextFree();
