@@ -86,7 +86,7 @@ public class CustomArrayImplTest {
         customArray.insert(15);
 
         customArray.setValue(0,20);
-        assertEquals(20, customArray.getValue(0));
+        assertEquals("[20, 5, 15]", customArray.toString());
         assertThrowsExactly(ArrayIndexOutOfBoundsException.class, () -> customArray.setValue(4, 5));
     }
 }
