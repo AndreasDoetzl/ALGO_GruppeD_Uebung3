@@ -1,8 +1,5 @@
-package java.org.lecture;
-import main.java.org.lecture.CustomArray;
-import main.java.org.lecture.CustomArrayImpl;
-import main.java.org.lecture.CustomArraySorter;
-import main.java.org.lecture.SelectionSort;
+package org.lecture;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

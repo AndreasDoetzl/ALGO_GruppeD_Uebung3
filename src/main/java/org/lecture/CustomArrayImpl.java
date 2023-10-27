@@ -1,4 +1,4 @@
-package main.java.org.lecture;
+package org.lecture;
 
 /**
  * Eine Implementierung der CustomArray-Schnittstelle.

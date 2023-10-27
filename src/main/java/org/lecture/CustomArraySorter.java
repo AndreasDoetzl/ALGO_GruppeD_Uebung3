@@ -1,4 +1,4 @@
-package main.java.org.lecture;
+package org.lecture;
 
 /**
  * Eine Schnittstelle, die die Sortieroperationen für ein benutzerdefiniertes Array definiert.
