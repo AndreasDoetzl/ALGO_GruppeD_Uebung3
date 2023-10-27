@@ -10,7 +10,8 @@ public class Main {
 
         try {
             CustomArray array = fileHandler.readNumbersFromCSV();
-            ((CustomArrayImpl) array).sort();
+            CustomArraySorter sorter = new SelectionSort();
+            sorter.sort(array);
             ((CustomArrayImpl) array).printArray();
         } catch (IOException e) {
             e.printStackTrace();
