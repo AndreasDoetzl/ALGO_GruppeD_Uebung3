@@ -22,7 +22,7 @@ public class Main {
             CustomArray array = fileHandler.readNumbersFromCSV();
             CustomArraySorter sorter = new SelectionSort();
             sorter.sort(array);
-            ((CustomArrayImpl) array).printArray();
+            System.out.println(array.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -11,8 +11,7 @@ Datei lesen
 
 
 Offene Todos:
-*) Unit Tests
-*) Java Doc
-*) ExceptionHandling
-*) Sortierung in eine eigene Service Klasse
-
+!) Unit Tests
+!) Java Doc
+!) ExceptionHandling
+!) Sortierung in eine eigene Service Klasse
