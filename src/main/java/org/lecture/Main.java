@@ -8,7 +8,7 @@ import java.io.IOException;
  * Sortiert diese Zahlen danach aufsteigend und gibt sie über die Konsole aus.</br>
  * </br>
  * @author Andreas Dötzl
- * @author Reihs Matthias
+ * @author Matthias Reihs
  * @author Miklos Komlosy
  *
  */

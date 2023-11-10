@@ -6,16 +6,16 @@ package org.lecture;
  */public interface CustomArray {
 
     /**
-     * Sucht die nächste freie Stelle im Array und gibt den Index zurück.
-     * @return Der Index der nächsten freien Stelle.
-     */
-    int nextFree();
-
-    /**
      * Fügt ein neues Element in das Array ein.
      * @param value Das einzufügende Element.
      */
     void insert(Integer value);
+
+    /**
+     * Sucht die nächste freie Stelle im Array und gibt den Index zurück.
+     * @return Der Index der nächsten freien Stelle.
+     */
+    int nextFree();
 
     /**
      * Löscht erste gefundene Element aus dem Array.
