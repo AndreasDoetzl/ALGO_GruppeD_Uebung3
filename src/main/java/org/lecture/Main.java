@@ -7,10 +7,10 @@ import java.io.IOException;
  * Liest Zahlen aus dem File src/main/resources/Numbers.csv aus und liefert diese in dem Abstrakten Daten Typ {@link CustomArray} retour. </br>
  * Sortiert diese Zahlen danach aufsteigend und gibt sie über die Konsole aus.</br>
  * </br>
+ *
  * @author Andreas Dötzl
  * @author Matthias Reihs
  * @author Miklos Komlosy
- *
  */
 public class Main {
 
@@ -22,9 +22,9 @@ public class Main {
             CustomArray array = fileHandler.readNumbersFromCSV();
             System.out.println("\nThe array without previous sorting:");
             System.out.println(array.toString());
-            CustomArraySorter sorter = new SelectionSort();
+            //   CustomArraySorter sorter = new SelectionSort();
             CustomArraySorter bubbleSort = new MikiBubbleSort();
-        //    sorter.sort(array);
+            //    sorter.sort(array);
             bubbleSort.sort(array);
             System.out.println(array.toString());
         } catch (IOException e) {

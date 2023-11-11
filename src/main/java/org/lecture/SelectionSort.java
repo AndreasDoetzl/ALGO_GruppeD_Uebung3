@@ -1,9 +1,9 @@
 package org.lecture;
 
 public class SelectionSort implements CustomArraySorter {
-/**
- * Eine Implementierung des SelectionSort-Algorithmus für die CustomArraySorter-Schnittstelle.
- */
+    /**
+     * Eine Implementierung des SelectionSort-Algorithmus für die CustomArraySorter-Schnittstelle.
+     */
     @Override
     public void sort(CustomArray array) {
         int n = array.length();
