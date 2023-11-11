@@ -20,8 +20,12 @@ public class Main {
 
         try {
             CustomArray array = fileHandler.readNumbersFromCSV();
+            System.out.println("\nThe array without previous sorting:");
+            System.out.println(array.toString());
             CustomArraySorter sorter = new SelectionSort();
-            sorter.sort(array);
+            CustomArraySorter bubbleSort = new MikiBubbleSort();
+        //    sorter.sort(array);
+            bubbleSort.sort(array);
             System.out.println(array.toString());
         } catch (IOException e) {
             e.printStackTrace();
