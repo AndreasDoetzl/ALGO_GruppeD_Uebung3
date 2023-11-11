@@ -21,5 +21,7 @@ public class SelectionSort implements CustomArraySorter {
             array.setValue(min_idx, array.getValue(i)); // Verwende set, um den Wert zu ändern
             array.setValue(i, temp); // Verwende set, um den Wert zu ändern
         }
+        System.out.println("selection sort is ready");
     }
 }
+
