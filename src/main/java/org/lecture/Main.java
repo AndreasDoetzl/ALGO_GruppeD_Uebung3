@@ -23,9 +23,11 @@ public class Main {
             System.out.println("\nThe array without previous sorting:");
             System.out.println(array.toString());
             //   CustomArraySorter sorter = new SelectionSort();
-            CustomArraySorter bubbleSort = new MikiBubbleSort();
-            //    sorter.sort(array);
-            bubbleSort.sort(array);
+           // CustomArraySorter bubbleSort = new MikiBubbleSort();
+            CustomArraySorter mergeSort = new MikiMergeSort();
+              mergeSort.sort(array);
+            //  sorter.sort(array);
+            //bubbleSort.sort(array);
             System.out.println(array.toString());
         } catch (IOException e) {
             e.printStackTrace();
