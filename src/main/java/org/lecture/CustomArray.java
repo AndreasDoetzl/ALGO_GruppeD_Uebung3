@@ -45,4 +45,6 @@ package org.lecture;
      */
     void setValue(int index, Integer value);
 
+    Integer[] getArray();
+
 }
