@@ -19,6 +19,6 @@ public class MikiBubbleSort implements CustomArraySorter {
             }
             n -= 1;
         }
-        System.out.println("\nBubble sort is ready");
+        System.out.println("\nBubble sort done");
     }
 }
