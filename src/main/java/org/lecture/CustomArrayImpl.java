@@ -73,6 +73,11 @@ public class CustomArrayImpl implements CustomArray {
     }
 
     @Override
+    public Integer[] getArray() {
+        return data;
+    }
+
+    @Override
     public String toString() {
         return Arrays.toString(data);
     }
